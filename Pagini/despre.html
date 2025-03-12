@@ -135,15 +135,14 @@
             </div>
         </div>
 
-        <div class="ult-fr">
-          <h2 style="margin-left: 10vw;">Ai o întrebare?</h2>
-          <form onsubmit="submitQuestion(event)">
-              <center><input type="text" placeholder="Scrie întrebarea ta aici..." id="question-input" required></center>
-              <button type="submit">Depune</button>
-          </form>
-          <p id="confirmare" style="display:none; margin-left: 10vw; color: green;">Întrebarea ta a fost depusă cu succes! Vom răspunde cât de repede posibil.</p>
-      </div>
-      </div>
+        <div class="chatbot-icon" onclick="toggleChat()">💬</div>
+        <div class="chat-container" id="chat-container">
+            <div class="chat-box" id="chat-box"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Scrie o întrebare..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">Trimite</button>
+            </div>
+        </div>
 
       <br>
       <br>
