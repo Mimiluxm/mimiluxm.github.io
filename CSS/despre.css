@@ -173,10 +173,82 @@ a{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media screen and (min-width:769px) {
-  .ult-fr button:hover {
-    background-color: rgba(255, 238, 0, 0.93);
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: gold;
+  color: black;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px gold;
+  font-size: 24px;
 }
+.chat-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  background-color: #111;
+  border: 2px solid gold;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 15px gold;
+  display: none;
+}
+.chat-box {
+  height: 300px;
+  overflow-y: auto;
+  border-bottom: 2px solid gold;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.message {
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.user {
+  background-color: gold;
+  color: #000;
+  text-align: right;
+}
+.bot {
+  background-color: #222;
+  color: gold;
+}
+.input-container {
+  display: flex;
+}
+input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid gold;
+  background-color: #111;
+  color: gold;
+  border-radius: 5px;
+}
+button {
+  background-color: gold;
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #daa520;
+}
+
+@media screen and (min-width:769px) {
+  
+  
 .mai:hover {
   background-color: rgba(255, 238, 0, 0.93);
 }
@@ -186,6 +258,25 @@ a{
 }
 }
 @media screen and (max-width:768px) {
+
+  .chatbot-icon {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    margin-bottom: 1vh;
+    background-color: gold;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px gold;
+    font-size: 24px;
+  }
+
   .imaginile img {
     width: 100%;
     height: 100%;
