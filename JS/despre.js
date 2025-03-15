@@ -33,6 +33,10 @@ const knowledgeBase = {
     "țară": "Da, livrăm în multe țări. Costul și timpul de livrare depind de locația ta.",
     "personalizare": "Da, ne specializăm în bijuterii personalizate pentru a crea ceva unic pentru dumneavoastră.",
     "returnare": "Puteți returna produsele nepersonalizate în termen de 30 de zile de la achiziție.",
+    "returna": "Puteți returna produsele nepersonalizate în termen de 30 de zile de la achiziție.",
+    "retur": "Puteți returna produsele nepersonalizate în termen de 30 de zile de la achiziție.",
+    "rambursare": "Puteți returna produsele nepersonalizate în termen de 30 de zile de la achiziție.",
+    "rambursa": "Puteți returna produsele nepersonalizate în termen de 30 de zile de la achiziție.",
     "eveniment": "Desigur! Acceptăm comenzi pentru evenimente speciale precum nunți, aniversări sau alte ocazii importante.",
     "hipoalergenic": "Da, majoritatea bijuteriilor noastre sunt realizate din materiale hipoalergenice, ideale pentru pielea sensibilă.",
     "dimensiune": "Da, oferim servicii de ajustare a dimensiunii pentru majoritatea bijuteriilor noastre.",
@@ -73,6 +77,12 @@ const knowledgeBase = {
     "manual": " Da, majoritatea bijuteriilor noastre sunt realizate manual de meșteșugari talentați, pentru a asigura un produs unic și de calitate.",
     "garanție": " Oferim o garanție de 12 luni pentru bijuteriile achiziționate, acoperind defectele de fabricație.",
     "garantie": " Oferim o garanție de 12 luni pentru bijuteriile achiziționate, acoperind defectele de fabricație.",
+    "locatie": " Magazinul este amplasat în Centrul Chișinăului, Gemeni et.2, Ștefan cel mare și sfînt 136, Chișinău, Moldova",
+    "locație": " Magazinul este amplasat în Centrul Chișinăului, Gemeni et.2, Ștefan cel mare și sfînt 136, Chișinău, Moldova",
+    "locatia": " Magazinul este amplasat în Centrul Chișinăului, Gemeni et.2, Ștefan cel mare și sfînt 136, Chișinău, Moldova",
+    "locația": " Magazinul este amplasat în Centrul Chișinăului, Gemeni et.2, Ștefan cel mare și sfînt 136, Chișinău, Moldova",
+    "amplasat": " Magazinul este amplasat în Centrul Chișinăului, Gemeni et.2, Ștefan cel mare și sfînt 136, Chișinău, Moldova",
+    "amplasare": " Magazinul este amplasat în Centrul Chișinăului, Gemeni et.2, Ștefan cel mare și sfînt 136, Chișinău, Moldova",
     "tendințe": " În acest sezon, tendințele includ bijuteriile minimaliste, cu designuri fine și moderne, dar și brățările și inelele cu pietre prețioase colorate.",
     "tendinte": " În acest sezon, tendințele includ bijuteriile minimaliste, cu designuri fine și moderne, dar și brățările și inelele cu pietre prețioase colorate.",
     "material propriu": "Bijuteriile noastre sunt realizate folosind materiale de înaltă calitate selectate cu atenție de la furnizori de încredere. Ne asigurăm că acestea respectă standardele noastre pentru durabilitate și estetică."
@@ -117,4 +127,26 @@ function handleKeyPress(event) {
 function toggleChat() {
     let chatContainer = document.getElementById("chat-container");
     chatContainer.style.display = chatContainer.style.display === "block" ? "none" : "block";
+}
+
+window.addEventListener("scroll", function () {
+    const button = document.querySelector(".chatbot-icon");
+    const chatContainer = document.querySelector(".chat-container");
+    const footer = document.querySelector(".footer"); 
+  
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const defaultBottom = 20; 
+  
+    if (footerRect.top < windowHeight) {
+      let overlap = windowHeight - footerRect.top;
+      let newBottom = Math.max(defaultBottom, overlap + 20);
+  
+      button.style.bottom = `${newBottom}px`;
+      chatContainer.style.bottom = `${newBottom + 80}px`; 
+    } else {
+      button.style.bottom = `${defaultBottom}px`;
+      chatContainer.style.bottom = "100px";
     }
+  });
+  
