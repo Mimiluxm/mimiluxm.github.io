@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mimilux - Coș</title>
+    <link rel="icon" href="../Imagini/Mimilux_icon-removebg-transformed_processed.png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/checkout.css">
+    <meta name="description" content="MIMILUX">
+    <meta name="keywords" content="Bijuterii, Brățări, Coliere, Colecții, Mimilux, mimilux">
+    <script src="https://kit.fontawesome.com/db27cc50b0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../Pagini/despre.html">Despre noi</a></li>
+                <li class="dropdown">
+                    <a href="../Pagini/produse.html">Produse</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Pagini/barbati.html">Colecția bărbați</a></li>
+                        <li><a href="../Pagini/femei.html">Colecția dame</a></li>
+                        <li><a href="../Pagini/sertar.html">Sertar</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Pagini/contacte.html">Contacte</a></li>
+            </ul>
+        </nav>
+        <div class="cart-icon" onclick="window.location.href='../Pagini/checkout.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+        </div>
+
+        <div class="language-flags">
+            <a href="../Pagini/checkout.html" title="Română" class="active">
+              <img src="https://flagcdn.com/w40/ro.png" alt="RO">
+            </a>
+            <a href="../Pages/checkout.html" title="English">
+              <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+            </a>
+            <a href="../Pag-rus/checkout.html" title="Русский">
+              <img src="https://flagcdn.com/w40/ru.png" alt="RU">
+            </a>
+          </div>
+    </header>
+
+
+
+
+    <div class="cont">
+        <div class="cart">
+            <h2 id="titlu-cos" style="color: #ffa813;">Coșul dvs.</h2>
+            <div id="cos-container" class="cart-items"></div>
+            <div id="total-section" class="total-price">Total: <span id="total-mdl">0</span> MDL</div>
+            <button id="checkout-button" onclick="openCheckoutForm()" type="button" class="fnsh">Finalizează
+                comanda</button>
+        </div>
+    </div>
+
+
+    <div id="checkout-form" style="display: none;">
+        <h2>Înregistrare</h2>
+        <input type="text" id="first-name" placeholder="Numele" required>
+        <input type="text" id="last-name" placeholder="Prenumele" required>
+        <input type="tel" id="phone" placeholder="Numărul de telefon" pattern="[0-9]{9}"
+            title="Numărul trebuie să aibă exact 9 cifre" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="address" placeholder="Adresa de livrare" required>
+        <button onclick="submitOrder()">Depuneți comanda</button>
+    </div>
+
+
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-image" class="lightbox-image" src="" alt="Enlarged Image">
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+          
+          <div class="footer-column">
+            <div class="footer-logo">
+              <a href="../index.html">
+                <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" width="90px">
+              </a>
+            </div>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Pagini</h3>
+            <a href="../Pagini/despre.html">Despre noi</a>
+            <a href="../Pagini/produse.html">Produse</a>
+            <a href="../Pagini/contacte.html">Contacte</a>
+            <a href="../Pagini/blog.html">Livrare si retur</a>
+            <a href="../Pagini/faq.html">Marimi Bijuterii</a>
+          </div>
+      
+      <div class="footer-column">
+      <h3>Contacte</h3>
+      <p><i class="fa-solid fa-phone"></i> +373 60 376 835</p>
+      <p><i class="fa-solid fa-location-dot"></i> Centrul Comercial Gemenii, etaj 2</p>
+      
+      <div class="footer-social" style="margin-top: 20px;">
+        <a href="https://www.facebook.com/profile.php?id=100067907257693" target="_blank">
+          <i class="fa-brands fa-facebook fa-2xl"></i>
+        </a>
+        <a href="https://www.instagram.com/mimilux.md/" target="_blank">
+          <i class="fa-brands fa-instagram fa-2xl"></i>
+        </a>
+      </div>
+      </div>
+      
+      
+      <div class="footer-column">
+        <h3>Vrei mai mult?</h3>
+        <p>Abonează-te pentru noutăți și oferte:</p>
+         <input type="email" id="newsletter-email" placeholder="Emailul tău">
+         <button id="newsletter-submit">Trimite</button>
+         <div id="newsletter-error" style="display: none; color: red; margin-top: 5px;">Te rugăm să introduci un email valid.</div>
+         <div id="newsletter-message" style="display: none; color: green; margin-top: 10px;">✔️ Mulțumim pentru abonare!</div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2025. Realizat în cadrul competiției „Tekwill Junior Ambassadors”.</p>
+        </div>
+      </footer>
+
+
+    <script src="../JS/cart.js"></script>
+    <script src="../JS/barbati.js"></script>
+</body>
+
+</html>

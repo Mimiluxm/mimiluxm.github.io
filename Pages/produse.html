@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="../CSS - engl/style.css">
+    <link rel="stylesheet" href="../CSS - engl/produse.css">
+    <meta name="description" content="MIMILUX">
+    <meta name="keywords" content="Bijuterii, Brățări, Coliere, Colecții, Mimilux, mimilux">
+    <link rel="icon" href="../Imagini/Mimilux_icon-removebg-transformed_processed.png">
+    <script src="https://kit.fontawesome.com/db27cc50b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="logo">
+            <a href="../Pages/index.html">
+                <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" alt="Logo">
+            </a>
+        </div>
+    
+        
+    
+        <nav>
+            <ul>
+                <li><a href="../Pages/despre.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="../Pages/produse.html">Products</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Pages/barbati.html">Men's Colection</a></li>
+                        <li><a href="../Pages/femei.html">Women's Colection</a></li>
+                        <li><a href="../Pages/sertar.html">Drawer</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Pages/contacte.html">Contacts</a></li>
+            </ul>
+        </nav>
+    
+        <div class="cart-icon" onclick="window.location.href='../Pages/checkout.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+        </div>
+
+        <div class="language-flags">
+          <a href="../Pagini/produse.html" title="Română">
+            <img src="https://flagcdn.com/w40/ro.png" alt="RO">
+          </a>
+          <a href="../Pages/produse.html" title="English" class="engl1">
+            <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+          </a>
+          <a href="../Pag-rus/produse.html" title="Русский">
+            <img src="https://flagcdn.com/w40/ru.png" alt="RU">
+          </a>
+        </div>
+        
+        
+          
+    </header>
+    
+    <div class="products-page">
+      <a href="../Pages/barbati.html" class="product-link">
+          <div class="product-image" style="background-image: url('../Imagini/barbatipoz.jpg');">
+              <div class="overlay-text">Men's Colection</div>
+          </div>
+      </a>
+      <a href="../Pages/femei.html" class="product-link">
+          <div class="product-image" style="background-image: url('../Imagini/femeiepoz1.jpg');">
+              <div class="overlay-text">Women's Colection</div>
+          </div>
+      </a>
+      <a href="../Pages/sertar.html" class="product-link">
+          <div class="product-image" style="background-image: url('../Imagini/sertar1.jpg');">
+              <div class="overlay-text">Drawer</div>
+          </div>
+      </a>
+  </div>
+  
+  <br>
+    
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-column">
+        <div class="footer-logo">
+          <a href="../index.html">
+            <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" width="90px">
+          </a>
+        </div>
+      </div>
+  
+      <div class="footer-column">
+        <h3>Pagini</h3>
+        <a href="../Pagini/despre.html">About Us</a>
+        <a href="../Pagini/produse.html">Products</a>
+        <a href="../Pagini/contacte.html">Contacts</a>
+        <a href="../Pagini/blog.html">Delivery and return</a>
+        <a href="../Pagini/faq.html">Jewelry Sizes</a>
+      </div>
+  
+  <div class="footer-column">
+  <h3>Contacts</h3>
+  <p><i class="fa-solid fa-phone"></i> +373 60 376 835</p>
+  <p><i class="fa-solid fa-location-dot"></i> Gemenii Shopping Center, 2nd floor</p>
+  
+  <div class="footer-social" style="margin-top: 20px;">
+    <a href="https://www.facebook.com/profile.php?id=100067907257693" target="_blank">
+      <i class="fa-brands fa-facebook fa-2xl"></i>
+    </a>
+    <a href="https://www.instagram.com/mimilux.md/" target="_blank">
+      <i class="fa-brands fa-instagram fa-2xl"></i>
+    </a>
+  </div>
+  </div>
+  
+  
+  <div class="footer-column">
+    <h3>Newsletter</h3>
+    <p>Subscribe for news and offers:</p>
+    <input type="email" id="newsletter-email" placeholder="Your email">
+    <button onclick="submitNewsletter()">Send</button>
+  </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025. Made as part of the "Tekwill Junior Ambassadors" competition.</p>
+    </div>
+  </footer>
+
+      <script src="../JS - engl/barbati.js"></script>
+</body>
+</html>
