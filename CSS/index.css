@@ -1,3 +1,8 @@
+@font-face {
+  font-family: futura;
+  src: url(../Fonts/futura-now-text.otf);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -45,28 +50,36 @@ a{
 }
 
 
-  .carousel-container {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    margin-top: 20px;
-  }
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
 
-  .carousel-track {
-    display: inline-block;
-    white-space: nowrap;
-    animation: scroll 15s linear infinite;
-  }
+.carousel-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
 
-  .carousel-track span {
-    display: inline-block;
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0 40px;
-    color: #000000;
+.carousel-track span {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: "futura";
+  padding: 5px 40px;
+  color: #000000;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 
   @keyframes scroll {
     0% {
@@ -77,31 +90,38 @@ a{
     }
   }
 
+  
+
   .carousel-wrapper {
     position: relative;
     width: 100vw;
-    margin-left: -25px; 
     padding: 40px 0;
     box-sizing: border-box;
+    
   }
   
-  .carousel {
+  .swiper-container {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 0 40px;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   
-  .card {
-    flex: 0 0 260px;
+  .swiper-slide {
+    max-width: 260px!important;
+    flex-shrink: 0; 
     background: white;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     padding: 16px;
     scroll-snap-align: center;
     transition: transform 0.3s ease;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    border-radius: 12px;
   }
   
   .card:hover {
@@ -112,7 +132,7 @@ a{
     width: 100%;
     border-radius: 12px;
   }
-  
+
   .title {
     font-weight: 600;
     font-size: 1.2rem;
@@ -142,7 +162,7 @@ a{
     width: 100%;
     font-weight: 600;
   }
-  
+
   .nav-btn {
     position: absolute;
     top: 50%;
@@ -168,8 +188,9 @@ a{
   }
   
   .nav-right {
-    right: 0px;
+    right: 50px;
   }
+  
 
   .why-mimilux {
     background: linear-gradient(to bottom, #fffaf5, #fff);
@@ -194,6 +215,7 @@ a{
     background: #b1975b;
     display: block;
     margin: 20px auto 0;
+    border-radius: 10px;
   }
 
   .features {
@@ -299,7 +321,7 @@ a{
 
 .recenz{
     text-align: center;
-    color: #FFD700;
+    color: #b1975b;
 }
 
 .hrrec{
@@ -307,7 +329,8 @@ a{
     justify-content: center;
     border: none; 
     height: 10px; 
-    background: linear-gradient(135deg, rgb(251, 255, 0), gold, rgb(255, 225, 0));
+    border-radius: 10px;
+    background: linear-gradient(to right, #b1975b, #fffaf5);
 }
 
   section img{
@@ -315,6 +338,11 @@ a{
     width: 90%;
   }
 
+@media screen and (width:2048px){
+  .feature{
+    max-width: 400px!important;
+  }
+}
 
 @media screen and (max-width:768px) {
  

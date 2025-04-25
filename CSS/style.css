@@ -1,3 +1,8 @@
+@font-face {
+  font-family: touche;
+  src: url(../Fonts/Touche-Light-BF642a2ebf8fe16.otf);
+}
+
 a{
     text-decoration: none;
     color: white;
@@ -172,7 +177,7 @@ margin-bottom: 10px;
   background-color: #222;
   color: #ecf0f1;
   padding: 50px 0 25px;
-  font-family: 'Biennale', sans-serif;
+  font-family: "touche";
   width: 100%;
 }
 
@@ -189,7 +194,7 @@ margin-bottom: 10px;
 
 .footer-column {
   flex: 1 1 220px;
-  margin: 20px 10px;
+  margin: 20px 5px;
   min-width: 200px;
 }
 
