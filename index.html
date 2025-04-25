@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mimilux - Acasă</title>
     <link rel="icon" href="./Imagini/Mimilux_icon-removebg-transformed_processed.png">
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/index.css">
     <meta name="description" content="MIMILUX">
@@ -50,7 +51,7 @@
             <a href="./index.html" title="Română" class="active">
               <img src="https://flagcdn.com/w40/ro.png" alt="RO">
             </a>
-            <a href="../mimiluxm.github.io-main/Pages/index.html" title="English">
+            <a href="./Pages/index.html" title="English">
               <img src="https://flagcdn.com/w40/gb.png" alt="EN">
             </a>
             <a href="./Pag-rus/index.html" title="Русский">
@@ -70,12 +71,26 @@
 
 <div class="carousel-container">
   <div class="carousel-track">
-    <span>Mimilux</span><span>Nu vindem doar bijuterii — vindem amintiri</span>
-    <span>Povestea ta, transformată într-o bijuterie</span><span>Creat cu grijă. Purtat cu iubire.</span><span>Mimilux</span><span>Mimilux</span>
+    <span>Mimilux</span>
+    <span>Creat cu grijă. Purtat cu iubire.</span>
+    <span>Mimilux</span>
+    <span>Creat cu grijă. Purtat cu iubire.</span>
+    <span>Mimilux</span>
+    <span>Creat cu grijă. Purtat cu iubire.</span>
+    <span>Mimilux</span>
+    <span>Creat cu grijă. Purtat cu iubire.</span>
+    <span>Mimilux</span>
+    <span>Creat cu grijă. Purtat cu iubire.</span>
+    <span>Mimilux</span>
+    <span>Creat cu grijă. Purtat cu iubire.</span>
+    <span>Mimilux</span>
+    <span>Creat cu grijă. Purtat cu iubire.</span>
+    <span>Mimilux</span>
+    <span>Creat cu grijă. Purtat cu iubire.</span>
   </div>
 </div>
 
-<p><h1 class="tx1" style="text-align: center; color: #ffd700;">Cele mai populare produse</h1></p>
+<p><h1 class="tx1" style="text-align: center; color: #b1975b;">Cele mai populare produse</h1></p>
 
 
 <hr class="hrrec">
@@ -84,79 +99,79 @@
 
 
 <div class="carousel-wrapper">
-  <button class="nav-btn nav-left" onclick="scrollCarousel(-1)">&#10094;</button>
+  <button class="nav-btn nav-left">&#10094;</button>
 
-  <div class="carousel" id="carousel">
-    <div class="card">
-      <img src="./Imagini/ceas NEGURO.png">
-      <div class="title">Ceas NEGURO</div>
-      <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
-      <div class="price">2640 MDL</div>
-      <a href="./Pagini/barbati.html#neguro"><button class="button">Cumpără acum</button></a>
-    </div>
+  <div class="carousel swiper-container" id="carousel">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide card">
+        <img src="./Imagini/ceas NEGURO.png">
+        <div class="title">Ceas NEGURO</div>
+        <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
+        <div class="price">2640 MDL</div>
+        <a href="./Pagini/barbati.html#neguro"><button class="button">Cumpără acum</button></a>
+      </div>
 
-    <div class="card">
-      <img src="./Imagini/Brățara_mister_-_BR014G-removebg-preview (1).png">
-      <div class="title">Brățara Mister</div>
-      <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
-      <div class="price">950 MDL</div>
-      <a href="./Pagini/femei.html#mister"><button class="button">Cumpără acum</button></a>
-    </div>
+      <div class="swiper-slide card">
+        <img src="./Imagini/Brățara_mister_-_BR014G-removebg-preview (1).png">
+        <div class="title">Brățara Mister</div>
+        <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
+        <div class="price">950 MDL</div>
+        <a href="./Pagini/femei.html#mister"><button class="button">Cumpără acum</button></a>
+      </div>
 
-    <div class="card">
-      <img src="./Imagini/tag-barbat.png">
-      <div class="title">TAG</div>
-      <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
-      <div class="price">800 MDL</div>
-      <a href="./Pagini/barbati.html#tag"><button class="button">Cumpără acum</button></a>
-    </div>
+      <div class="swiper-slide card">
+        <img src="./Imagini/tag-barbat.png">
+        <div class="title">TAG</div>
+        <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
+        <div class="price">800 MDL</div>
+        <a href="./Pagini/barbati.html#tag"><button class="button">Cumpără acum</button></a>
+      </div>
 
-    <div class="card">
-      <img src="./Imagini/butoniere.png" alt="Product Image">
-      <div class="title">Butoniere</div>
-      <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
-      <div class="price">5500 MDL</div>
-      <a href="./Pagini/barbati.html#butoniere"><button class="button">Cumpără acum</button></a>
-    </div>
+      <div class="swiper-slide card">
+        <img src="./Imagini/butoniere.png" alt="Product Image">
+        <div class="title">Butoniere</div>
+        <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
+        <div class="price">5500 MDL</div>
+        <a href="./Pagini/barbati.html#butoniere"><button class="button">Cumpără acum</button></a>
+      </div>
 
-    <div class="card">
-      <img src="./Imagini/Ceas winner Love MECANIC W033S+G+B.jpeg">
-      <div class="title">Ceas winner Love MECANIC</div>
-      <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
-      <div class="price">1500 MDL</div>
-      <a href="./Pagini/barbati.html#winner-negru"><button class="button">Cumpără acum</button></a>
-    </div>
+      <div class="swiper-slide card">
+        <img src="./Imagini/Ceas winner Love MECANIC W033S+G+B.jpeg">
+        <div class="title">Ceas winner Love MECANIC</div>
+        <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
+        <div class="price">1500 MDL</div>
+        <a href="./Pagini/barbati.html#winner-negru"><button class="button">Cumpără acum</button></a>
+      </div>
 
-    <div class="card">
-      <img src="./Imagini/Brățara richmond - BR065G.png">
-      <div class="title">Brățara richmond</div>
-      <br>
-      <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
-      <br>
-      <div class="price">600 MDL</div>
-      <a href="./Pagini/femei.html#richmond"><button class="button">Cumpără acum</button></a>
-    </div>
+      <div class="swiper-slide card">
+        <img src="./Imagini/Brățara richmond - BR065G.png"><br><br><br>
+        <div class="title">Brățara richmond</div>
+        <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
+        <div class="price">600 MDL</div>
+        <a href="./Pagini/femei.html#richmond"><button class="button">Cumpără acum</button></a>
+      </div>
 
-    <div class="card">
-      <img src="./Imagini/Colier_diamant_cu_inima_-_COL005G-removebg-preview (1).png" alt="Product Image">
-      <div class="title">Colier Diamant cu Inima</div>
-      <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
-      <div class="price">750 MDL</div>
-      <a href="./Pagini/femei.html#diamant-inima"><button class="button">Cumpără acum</button></a>
-    </div>
+      <div class="swiper-slide card">
+        <img src="./Imagini/Colier_diamant_cu_inima_-_COL005G-removebg-preview (1).png" alt="Product Image">
+        <div class="title">Colier Diamant cu Inima</div>
+        <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
+        <div class="price">750 MDL</div>
+        <a href="./Pagini/femei.html#diamant-inima"><button class="button">Cumpără acum</button></a>
+      </div>
 
-    <div class="card">
-      <img src="./Imagini/Brățara Stelar -16 Cm - BR022G.png" alt="Product Image">
-      <div class="title">Brățara Stelar</div>
-      <br>
-      <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
-      <div class="price">900 MDL</div>
-      <a href="./Pagini/femei.html#stelar"><button class="button">Cumpără acum</button></a>
+      <div class="swiper-slide card">
+        <img src="./Imagini/Brățara Stelar -16 Cm - BR022G.png" alt="Product Image"><br><br>
+        <div class="title">Brățara Stelar</div>
+        <div class="description">Oțel inoxidabil de înaltă calitate, placat cu aur 18K sau rodiu pentru un plus de strălucire și protecție.</div>
+        <div class="price">900 MDL</div>
+        <a href="./Pagini/femei.html#stelar"><button class="button">Cumpără acum</button></a>
+      </div>
     </div>
   </div>
 
-  <button class="nav-btn nav-right" onclick="scrollCarousel(1)">&#10095;</button>
+  <button class="nav-btn nav-right">&#10095;</button>
 </div>
+
 
 <br>
 <br>
@@ -291,5 +306,6 @@
 
 <script src="./JS/slideshow.js"></script>
 <script src="./JS/barbati.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
