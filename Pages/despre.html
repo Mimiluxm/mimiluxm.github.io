@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="../CSS - engl/style.css">
+    <link rel="stylesheet" href="../CSS - engl/despre.css">
+    <meta name="description" content="MIMILUX">
+    <meta name="keywords" content="Bijuterii, Brățări, Coliere, Colecții, Mimilux, mimilux">
+    <link rel="icon" href="../Imagini/Mimilux_icon-removebg-transformed_processed.png"> 
+    <script src="https://kit.fontawesome.com/db27cc50b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="logo">
+            <a href="../Pages/index.html">
+                <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" alt="Logo">
+            </a>
+        </div>
+    
+        
+    
+        <nav>
+            <ul>
+                <li><a href="../Pages/despre.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="../Pages/produse.html">Products</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Pages/barbati.html">Men's Colection</a></li>
+                        <li><a href="../Pages/femei.html">Women's Colection</a></li>
+                        <li><a href="../Pages/sertar.html">Luxury Colection</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Pages/contacte.html">Contacts</a></li>
+            </ul>
+        </nav>
+    
+        <div class="cart-icon" onclick="window.location.href='../Pages/checkout.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+        </div>
+
+        <div class="language-flags">
+          <a href="../Pagini/despre.html" title="Română">
+            <img src="https://flagcdn.com/w40/ro.png" alt="RO">
+          </a>
+          <a href="../Pages/despre.html" title="English" class="engl1">
+            <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+          </a>
+          <a href="../Pag-rus/despre.html" title="Русский">
+            <img src="https://flagcdn.com/w40/ru.png" alt="RU">
+          </a>
+        </div>
+        
+        
+          
+    </header>
+    
+    
+
+
+
+<br>
+
+
+<div class="cont">
+    <div class="content">
+        <p>Mimilux Store is a personalized jewelry company, with an online and offline presence, specializing in engraved jewelry such as rings, necklaces, earrings, bracelets, and cufflinks.</p>
+        <div class="mai-mult">
+            <p class="ascuns">The jewelry is made of stainless steel plated with 18-karat gold or rhodium, which makes it resistant to wear and fading. Mimilux offers a one-year warranty for each piece of jewelry, and engraving is included in the price. As for the packaging, the store offers over 10 types of packaging, with and without personalized messages, but the packaging is not included in the price of the jewelry.</p>
+            <a class="mai" onclick="toggleReadMore()">Read more ▼</a>
+        </div>
+    </div>
+</div>
+    
+
+        <br>
+        <br>
+        <br>
+
+        <h2 class="intr">Frequently asked questions</h2>
+
+        <div class="faq-grid">
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3>What materials do you use for jewelry? </h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp">
+                    Our jewelry is made of stainless steel plated with 18 karat gold or rhodium.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3>Do you offer customization options?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp">
+                    Yes, we specialize in custom jewelry to create something unique for you.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3>What is the return policy?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp">
+                    You can return non-personalized products within 30 days of purchase.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3>Can I order jewelry for a special event?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp">
+                    Of course! We accept orders for special events such as weddings, anniversaries or other important occasions.
+                </div>
+            </div>
+        
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3>Is your jewelry hypoallergenic?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp">
+                    Yes, most of our jewelry is made from hypoallergenic materials, ideal for sensitive skin.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3>Can I change the size of the jewelry?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp">
+                    Yes, we offer size adjustment services for most of our jewelry.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3>How long does it take to process a custom order?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp">
+                    The processing time for a custom order is approximately 7-14 business days.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3>Is the jewelry made from your own material?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp">
+                    Our jewelry is made using high-quality materials carefully selected from trusted suppliers. We ensure that they meet our standards for durability and aesthetics.
+                </div>
+            </div>
+        </div>
+
+        <div class="chatbot-icon" onclick="toggleChat()">💬</div>
+        <div class="chat-container" id="chat-container">
+            <div class="chat-box" id="chat-box"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Write a question..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+      <br>
+      <br>
+
+      <footer class="footer">
+        <div class="footer-container">
+          
+          <div class="footer-column">
+            <div class="footer-logo">
+              <a href="../Pages/index.html">
+                <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" width="90px">
+              </a>
+            </div>
+          </div>
+      
+          <div class="footer-column">
+            <h3>Pages</h3>
+            <a href="../Pages/despre.html">About Us</a>
+            <a href="../Pages/produse.html">Products</a>
+            <a href="../Pages/contacte.html">Contacts</a>
+            <a href="../Pages/livrare.html">Delivery & return</a>
+            <a href="../Pages/marimi.html">Jewelry Sizes</a>
+          </div>
+      
+      <div class="footer-column">
+      <h3>Contacts</h3>
+      <p><i class="fa-solid fa-phone"></i> +373 60 376 835</p>
+      <p><i class="fa-solid fa-location-dot"></i> Gemenii Shopping Center, 2nd floor</p>
+      
+      <div class="footer-social" style="margin-top: 20px;">
+        <a href="https://www.facebook.com/profile.php?id=100067907257693" target="_blank">
+          <i class="fa-brands fa-facebook fa-2xl"></i>
+        </a>
+        <a href="https://www.instagram.com/mimilux.md/" target="_blank">
+          <i class="fa-brands fa-instagram fa-2xl"></i>
+        </a>
+      </div>
+      </div>
+      
+      
+      <div class="footer-column">
+        <h3>Newsletter</h3>
+        <p>Subscribe for news and offers:</p>
+        <input type="email" id="newsletter-email" placeholder="Your email">
+        <button onclick="submitNewsletter()">Send</button>
+        <div id="newsletter-error" style="display: none; color: red; margin-top: 5px;">Please enter a valid email.</div>
+        <div id="newsletter-message" style="display: none; color: green; margin-top: 10px;">✔️ Thank you for subscribing!</div>
+      </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2025. Made as part of the "Tekwill Junior Ambassadors" competition.</p>
+        </div>
+      </footer>
+
+<script src="../JS - engl/barbati.js"></script>
+<script src="../JS - engl/despre.js"></script>
+<script src="../JS - engl/style.js"></script>  
+</body>
+</html>
