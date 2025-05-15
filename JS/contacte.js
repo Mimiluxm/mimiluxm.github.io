@@ -65,7 +65,7 @@ const translations = {
     scheduleDetails: "Luni - Sâmbătă: 11:00 - 19:00 Duminică: Zi liberă",
     mapTitle: "Găsiți-ne aici!",
     bannerImgDesktop: "../Imagini/fetita1.jpg",
-    bannerImgMobile: "../Imagini/fetita2.webp",
+    bannerImgMobile: "../Imagini/fetita2.jpg",
   },
   en: {
     navAbout: "About Us",
