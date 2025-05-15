@@ -372,7 +372,7 @@ section img {
     justify-content: center;
     border: none;
     height: 7px;
-    background: linear-gradient(135deg, rgb(251, 255, 0), gold, rgb(255, 225, 0));
+    background: linear-gradient(to right, #222222e6, #cbcbcb, #222222e6);
   }
 
   #popcl {
