@@ -152,19 +152,40 @@ function closeCheckoutForm() {
 }
 
 
+function getTranslation(key) {
+  const element = document.querySelector(`[data-translate="${key}"]`);
+  return element ? element.textContent : '';
+}
+
+function getPlaceholder(key) {
+  const element = document.querySelector(`[data-translate-placeholder="${key}"]`);
+  return element ? element.placeholder : '';
+}
+
+function toggleDelivery() {
+  const isLivrare = document.getElementById('delivery').checked;
+  document.getElementById('livrare-fields').style.display = isLivrare ? 'block' : 'none';
+  document.getElementById('pickup-address').style.display = isLivrare ? 'none' : 'block';
+
+  document.getElementById('raion').required = isLivrare;
+  document.getElementById('address').required = isLivrare;
+}
+
 function submitOrder() {
   const firstName = document.getElementById('first-name').value.trim();
   const lastName = document.getElementById('last-name').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const email = document.getElementById('email').value.trim();
-  const address = document.getElementById('address').value.trim();
+  const isLivrare = document.getElementById('delivery').checked;
+  const isRidicare = document.getElementById('pickup').checked;
 
-  const alertFillFields = document.querySelector('[data-translate="alertFillFields"]').textContent;
-  const alertPhoneInvalid = document.querySelector('[data-translate="alertPhoneInvalid"]').textContent;
-  const alertEmailInvalid = document.querySelector('[data-translate="alertEmailInvalid"]').textContent;
-  const alertThanks = document.querySelector('[data-translate="alertThanks"]').textContent;
+  const alertFillFields = getTranslation('alertFillFields');
+  const alertPhoneInvalid = getTranslation('alertPhoneInvalid');
+  const alertEmailInvalid = getTranslation('alertEmailInvalid');
+  const alertThanks = getTranslation('alertThanks');
+  const alertLivrareIncompleta = getTranslation('alertLivrareIncompleta');
 
-  if (!firstName || !lastName || !phone || !email || !address) {
+  if (!firstName || !lastName || !phone || !email || (!isLivrare && !isRidicare)) {
     alert(alertFillFields);
     return;
   }
@@ -181,8 +202,30 @@ function submitOrder() {
     return;
   }
 
+  let address = '';
+  let raion = '';
+  let localitate = '';
+
+  if (isLivrare) {
+    const raionSelect = document.getElementById('raion');
+    raion = raionSelect.options[raionSelect.selectedIndex].text;
+    localitate = document.getElementById('localitate').value.trim();
+    address = document.getElementById('address').value.trim();
+
+    if (!raion || !localitate || !address || raionSelect.value === "") {
+      alert(alertLivrareIncompleta);
+      return;
+    }
+  } else {
+    address = "Centrul Comercial Gemenii, etaj 2";
+  }
+
   const cos = JSON.parse(localStorage.getItem("cos")) || [];
   const total = cos.reduce((sum, produs) => sum + produs.pret * produs.cantitate, 0);
+
+  let fullAddress = isLivrare
+  ? `${getTranslation("raion_label")}: ${raion}, ${getTranslation("localitate_label")}: ${localitate}, ${getTranslation("adresa_label")}: ${address}`
+  : address;
 
   const personalizedMessage = alertThanks
     .replace("{firstName}", firstName)
@@ -190,18 +233,16 @@ function submitOrder() {
     .replace("{total}", total)
     .replace("{phone}", phone)
     .replace("{email}", email)
-    .replace("{address}", address);
+    .replace("{address}", fullAddress);
 
   alert(personalizedMessage);
   window.location.href = "../index.html";
-
   localStorage.setItem("cos", JSON.stringify([]));
   afiseazaCos();
 
   document.getElementById("checkout-form").style.display = 'none';
   cartSection.style.display = 'block';
 }
-
 function openLightbox(imageSrc) {
   const lightbox = document.getElementById('lightbox');
   const lightboxImage = document.getElementById('lightbox-image');
