@@ -137,7 +137,17 @@ const translations = {
     alertFillFields: "Vă rugăm să completați toate câmpurile!",
     alertPhoneInvalid: "Numărul de telefon trebuie să conțină exact 9 cifre și să nu includă litere!",
     alertEmailInvalid: "Vă rugăm să introduceți o adresă de email validă!",
-    alertThanks: "Vă mulțumim pentru comandă, {firstName} {lastName}!\nTotal: {total} MDL.\nVă vom contacta la {phone} sau prin email la {email}.\nAdresa de livrare: {address}"
+    alertThanks: "Vă mulțumim pentru comandă, {firstName} {lastName}!\nTotal: {total} MDL.\nVă vom contacta la {phone} sau prin email la {email}.\nAdresa de livrare: {address}",
+    alertLivrareIncompleta: "Vă rugăm să completați raionul, localitatea și adresa de livrare.",
+    town: "Localitate",
+    pickupAddress: "Punct de ridicare: Centrul Comercial Gemenii, etaj 2",
+    deliveryMethod: "Metoda de livrare:",
+    Courier: "Livrare prin curier",
+    pickup: "Ridicare din magazin",
+    raion: "Selectați raion",
+    raion_label: "Raion",
+      localitate_label: "Localitate",
+      adresa_label: "Adresă",
   },
   en: {
     Brățară_Elita_BR002S: "Elite Bracelet - 21 CM - BR002S",
@@ -244,7 +254,17 @@ ANGEL: "ANGEL",
     alertFillFields: "Please fill in all the fields!",
     alertPhoneInvalid: "The phone number must contain exactly 9 digits and not include letters",
     alertEmailInvalid: "Please enter a valid email address!",
-    alertThanks: "Thank you for your order, {firstName} {lastName}!\nTotal: {total} MDL.\nWe will contact you at {phone} or via email at {email}.\nDelivery address: {address}"
+    alertThanks: "Thank you for your order, {firstName} {lastName}!\nTotal: {total} MDL.\nWe will contact you at {phone} or via email at {email}.\nDelivery address: {address}",
+    alertLivrareIncompleta: "Please fill in the district, city and delivery address.",
+    town: "City",
+    pickupAddress: "Pickup Point: Gemenii Shopping Center, 2nd floor",
+    deliveryMethod: "Delivery method",
+    Courier: "Delivery by courier",
+    pickup: "Store pickup",
+    raion: "Select district",
+    raion_label: "District",
+      localitate_label: "Locality",
+      adresa_label: "Address",
   },
   ru: {
     Brățară_Elita_BR002S: "Браслет Эліта - 21 см - BR002S",
@@ -351,8 +371,17 @@ ANGEL: "АНГЕЛ",
     alertFillFields: "Пожалуйста, заполните все поля!",
     alertPhoneInvalid: "Номер телефона должен содержать ровно 9 цифр и не должен содержать буквы!",
     alertEmailInvalid: "Пожалуйста, введите действительный адрес электронной почты!",
-    alertThanks: "Спасибо за заказ, {firstName} {lastName}!\nИтоговая сумма: {total} MDL.\nМы свяжемся с вами по телефону {phone} или по электронной почте {email}.\nАдрес доставки: {address}"
-
+    alertThanks: "Спасибо за заказ, {firstName} {lastName}!\nИтоговая сумма: {total} MDL.\nМы свяжемся с вами по телефону {phone} или по электронной почте {email}.\nАдрес доставки: {address}",
+    alertLivrareIncompleta: "Пожалуйста, укажите район, город и адрес доставки.",
+    town: "Город",
+    pickupAddress: "Пункт выдачи: Торговый центр Gemenii, 2-й этаж",
+    deliveryMethod: "Способ доставки",
+    Courier: "Доставка курьером",
+    pickup: "Самовывоз из магазина",
+    raion: "Выберите район",
+    raion_label: "Район",
+      localitate_label: "Населённый пункт",
+      adresa_label: "Адрес"
   }
 };
 
