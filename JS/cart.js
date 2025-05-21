@@ -133,7 +133,7 @@ function openCheckoutForm() {
   const checkoutForm = document.getElementById("checkout-form");
   const footer = document.querySelector('.footer');
 
-  cartSection.style.display = 'none';
+  cartSection.style.display = 'block';
   checkoutForm.style.display = 'block';
 
 
@@ -261,5 +261,13 @@ productImages.forEach(image => {
     openLightbox(image.src);
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const comandaButton = document.getElementById('checkout-button');
+
+  comandaButton.addEventListener('click', function() {
+    overlay.classList.remove('ascuns');
+  });
+})
 
 
