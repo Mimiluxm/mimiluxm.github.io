@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Colecția de Lux</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/sertar.css">
+    <meta name="description" content="MIMILUX">
+    <meta name="keywords" content="Bijuterii, Brățări, Coliere, Colecții, Mimilux, mimilux">
+    <link rel="icon" href="../Imagini/Mimilux_icon-removebg-transformed_processed.png">
+    <script src="https://kit.fontawesome.com/db27cc50b0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Jim+Nightshade&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" alt="Logo">
+        </a>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="../Pagini/despre.html" data-translate="navAbout">Despre noi</a></li>
+            <li class="dropdown">
+                <a href="../Pagini/produse.html" data-translate="navProducts">Produse</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pagini/barbati.html" data-translate="navMensCollection">Colecția bărbați</a></li>
+                    <li><a href="../Pagini/femei.html" data-translate="navWomensCollection">Colecția dame</a></li>
+                    <li><a href="../Pagini/sertar.html" data-translate="navLuxuryCollection">Colecția de Lux</a></li>
+                </ul>
+            </li>
+            <li><a href="../Pagini/contacte.html" data-translate="navContact">Contacte</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-icon" onclick="window.location.href='../Pagini/checkout.html'">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <div class="language-flags">
+        <a href="#" title="Română" class="active" id="flag-ro">
+            <img src="https://flagcdn.com/w40/ro.png" alt="RO">
+        </a>
+        <a href="#" title="English" id="flag-en">
+            <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+        </a>
+        <a href="#" title="Русский" id="flag-ru">
+            <img src="https://flagcdn.com/w40/ru.png" alt="RU">
+        </a>
+    </div>
+</header>
+
+    <br>
+    <br>
+    
+<div class="top-bar">
+  <div class="filter-container">
+    <select id="categoryFilter" onchange="applyFilters()">
+      <option value="all" data-translate="all_products">Toate Produsele</option>
+      <option value="Colier" data-translate="necklaces">Coliere</option>
+      <option value="Cercei" data-translate="earrings">Cercei</option>
+      <option value="Inel" data-translate="rings">Inele</option>
+    </select>
+  </div>
+
+  <div class="filter-container">
+    <div class="price-inputs">
+      <span class="filter-label" data-translate="price">Preț:</span>
+      <div class="input-group">
+        <input type="number" id="minPrice" value="0" min="0" max="1000">
+        <span class="ion">lei</span>
+      </div>
+      <span>-</span>
+      <div class="input-group">
+        <input type="number" id="maxPrice" value="1000" min="0" max="1000">
+        <span class="ion">lei</span>
+      </div>
+    </div>
+
+    <div class="slider-wrapper">
+      <div class="range-track" id="rangeTrack"></div>
+      <input type="range" id="rangeMin" min="0" max="1000" value="0" step="1">
+      <input type="range" id="rangeMax" min="0" max="1000" value="1000" step="1">
+    </div>
+  </div>
+
+
+   <div class="dropdown-container">
+    <button class="dropdown-toggle" onclick="toggleDropdown()" data-translate="sort">SORTARE ▼</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <div class="dropdown-option" onclick="selectOption(this, 'alphabetical')">
+        în ordine alfabetică <span class="tick" id="tick-alphabetical">✔</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption(this, 'expensive')">
+        mai scump <span class="tick" id="tick-expensive">✔</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption(this, 'cheap')">
+        mai ieftin <span class="tick" id="tick-cheap">✔</span>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+  <br><br>
+
+  <button id="scrollToTopBtn" title="Mergi sus">↑</button>
+
+  <div class="container">
+    <div class="products">
+ 
+      <div class="product" data-category="Colier" data-price="470">
+        <img src="../Imagini/Colier din inima.jpg" class="product-image">
+        <h3 data-translate="colier_inima">Colier din Inimă</h3>
+        <p>470 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Colier din Inimă', '../Imagini/Colier din inima.jpg', 470)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Colier" data-price="490">
+        <img src="../Imagini/Colier Misterinity.png" class="product-image">
+        <h3 data-translate="colier_misterinity">Colier Misterinity</h3>
+        <p>490 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Colier Misterinity', '../Imagini/Colier Misterinity.png', 490)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Colier" data-price="590">
+        <img src="../Imagini/Colier Pinkysho.jpg" class="product-image">
+        <h3 data-translate="colier_pinkysho">Colier Pinkysho</h3>
+        <p>590 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Colier Pinkysho', '../Imagini/Colier Pinkysho.jpg', 590)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="1000">
+        <img src="../Imagini/Cercei din Inima.png" class="product-image">
+        <h3 data-translate="cercei_inima">Cercei din Inima</h3>
+        <p>1000 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Cercei din Inima', '../Imagini/Cercei din Inima.png', 1000)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="490">
+        <img src="../Imagini/Cercei Misterinity.png" class="product-image">
+        <h3 data-translate="cercei_misterinity">Cercei Misterinity</h3>
+        <p>490 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Cercei Misterinity', '../Imagini/Cercei Misterinity.png', 490)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="590">
+        <img src="../Imagini/Cercei pinckysho.jpg" class="product-image">
+        <h3 data-translate="cercei_pinckysho">Cercei Pinckysho</h3>
+        <p>590 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Cercei Pinckysho', '../Imagini/Cercei pinckysho.jpg', 590)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Inel" data-price="470">
+        <img src="../Imagini/Inel din Inimă.png" class="product-image">
+        <h3 data-translate="inel_inima">Inel din Inimă</h3>
+        <p>470 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Inel din Inimă', '../Imagini/Inel din Inimă.png', 470)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Inel" data-price="490">
+        <img src="../Imagini/Inel Misterinity.png" class="product-image">
+        <h3 data-translate="inel_misterinity">Inel Misterinity</h3>
+        <p>490 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Inel Misterinity', '../Imagini/Inel Misterinity.png', 490)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Inel" data-price="590">
+        <img src="../Imagini/Inel Pinckysho.png" class="product-image">
+        <h3 data-translate="inel_pinckysho">Inel Pinckysho</h3>
+        <p>590 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Inel Pinckysho', '../Imagini/Inel Pinckysho.png', 590)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Colier" data-price="560">
+        <img src="../Imagini/Colier Lady.jpg" class="product-image">
+        <h3 data-translate="colier_lady">Colier Lady</h3>
+        <p>560 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Colier Lady', '../Imagini/Colier Lady.jpg', 560)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Colier" data-price="450">
+        <img src="../Imagini/Colier Yellow flower.jpg" class="product-image">
+        <h3 data-translate="colier_yellow_flower">Colier Yellow Flower</h3>
+        <p>450 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Colier Yellow Flower', '../Imagini/Colier Yellow flower.jpg', 450)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Colier" data-price="430">
+        <img src="../Imagini/Colier Brilo.png" class="product-image">
+        <h3 data-translate="colier_brilo">Colier Brilo</h3>
+        <p>430 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Colier Brilo', '../Imagini/Colier Brilo.png', 430)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="560">
+        <img src="../Imagini/Cercei Lady.png" class="product-image">
+        <h3 data-translate="cercei_lady">Cercei Lady</h3>
+        <p>560 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Cercei Lady', '../Imagini/Cercei Lady.png', 560)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="460">
+        <img src="../Imagini/Cercei Yellow Flower.png" class="product-image">
+        <h3 data-translate="cercei_yellow_flower">Cercei Yellow Flower</h3>
+        <p>460 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Cercei Yellow Flower', '../Imagini/Cercei Yellow Flower.png', 460)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="430">
+        <img src="../Imagini/Cercei Brilo.png" class="product-image">
+        <h3 data-translate="cercei_brilo">Cercei Brilo</h3>
+        <p>430 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Cercei Brilo', '../Imagini/Cercei Brilo.png', 430)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Inel" data-price="560">
+        <img src="../Imagini/Inel Lady.png" class="product-image">
+        <h3 data-translate="inel_lady">Inel Lady</h3>
+        <p>560 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Inel Lady', '../Imagini/Inel Lady.png', 560)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Inel" data-price="450">
+        <img src="../Imagini/Inel Yellow Flower.png" class="product-image">
+        <h3 data-translate="inel_yellow_flower">Inel Yellow Flower</h3>
+        <p>450 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Inel Yellow Flower', '../Imagini/Inel Yellow Flower.png', 450)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Inel" data-price="430">
+        <img src="../Imagini/Inel Brilo.png" class="product-image">
+        <h3 data-translate="inel_brilo">Inel Brilo</h3>
+        <p>430 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Inel Brilo', '../Imagini/Inel Brilo.png', 430)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="550">
+        <img src="../Imagini/Coco.png" class="product-image">
+        <h3 data-translate="cercei_coco">Cercei Coco</h3>
+        <p>550 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Coco', '../Imagini/Coco.png', 550)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="550">
+        <img src="../Imagini/Coco - CZ.png" class="product-image">
+        <h3 data-translate="cercei_coco_cz">Cercei Coco</h3>
+        <p>550 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Coco', '../Imagini/Coco - CZ.png', 550)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="770">
+        <img src="../Imagini/Coco Luxe.png" class="product-image">
+        <h3 data-translate="cercei_coco_luxe">Cercei Coco Luxe</h3>
+        <p>770 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Coco Luxe', '../Imagini/Coco Luxe.png', 770)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="400">
+        <img src="../Imagini/Gisele Starmoon.png" class="product-image">
+        <h3 data-translate="cercei_gisele_starmoon">Cercei Gisele Starmoon</h3>
+        <p>400 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Gisele Starmoon', '../Imagini/Gisele Starmoon.png', 400)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Cercei" data-price="490">
+        <img src="../Imagini/Gisele Glow.png" class="product-image">
+        <h3 data-translate="cercei_gisele_glow">Cercei Gisele Glow</h3>
+        <p>490 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('Gisele Glow', '../Imagini/Gisele Glow.png', 490)">Adaugă în coș</button>
+      </div>
+ 
+      <div class="product" data-category="Colier" data-price="980">
+        <img src="../Imagini/ANGEL.jpg" class="product-image">
+        <h3 data-translate="colier_angel">Colier ANGEL</h3>
+        <p>980 MDL</p>
+        <button data-translate="addToCart" onclick="adaugaInCos('ANGEL', '../Imagini/ANGEL.jpg', 980)">Adaugă în coș</button>
+      </div>
+ 
+    </div>
+</div>
+
+  
+  
+
+
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-image" class="lightbox-image" src="" alt="Enlarged Image">
+</div>
+  
+<div id="notific1" class="notific1">
+    <div class="notific-ic">
+        <div class="spin"></div>
+        <div class="bifa">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle cx="26" cy="26" r="25" fill="none" />
+                <path fill="none" d="M14 27l10 10 14-14" />
+            </svg>
+        </div>
+    </div>
+    <p id="mesaj" data-translate="product_added">Produs adăugat în coș!</p>
+</div>
+
+  
+  <br>
+  <br>
+ 
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-column">
+        <div class="footer-logo">
+          <a href="../index.html">
+            <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" width="90px">
+          </a>
+        </div>
+      </div>
+  
+      <div class="footer-column">
+        <h3 data-translate="pages">Pagini</h3>
+        <a href="../Pagini/despre.html" data-translate="aboutUs">Despre noi</a>
+        <a href="../Pagini/produse.html" data-translate="products">Produse</a>
+        <a href="../Pagini/contacte.html" data-translate="contacts">Contacte</a>
+        <a href="../Pagini/livrare.html" data-translate="delivery">Livrare si retur</a>
+        <a href="../Pagini/marimi.html" data-translate="sizes">Marimi Bijuterii</a>
+      </div>
+  
+  <div class="footer-column">
+  <h3 data-translate="contacts1">Contacte</h3>
+  <p><i class="fa-solid fa-phone"></i> +373 60 376 835</p>
+  <p data-translate="gemenii"><i class="fa-solid fa-location-dot"></i> Centrul Comercial Gemenii, etaj 2</p>
+  
+  <div class="footer-social" style="margin-top: 20px;">
+    <a href="https://www.facebook.com/profile.php?id=100067907257693" target="_blank">
+      <i class="fa-brands fa-facebook fa-2xl"></i>
+    </a>
+    <a href="https://www.instagram.com/mimilux.md/" target="_blank">
+      <i class="fa-brands fa-instagram fa-2xl"></i>
+    </a>
+  </div>
+  </div>
+  
+  
+  <div class="footer-column">
+    <h3 data-translate="more">Vrei mai mult?</h3>
+    <p data-translate="newsofert">Abonează-te pentru noutăți și oferte:</p>
+    <input type="email" id="newsletter-email" data-translate-placeholder="email" placeholder="Emailul tău">
+     <button id="newsletter-submit" data-translate="send">Trimite</button>
+     <div id="newsletter-error" style="display: none; color: red; margin-top: 5px;" data-translate="pleaseValid">Te rugăm să introduci un email valid.</div>
+     <div id="newsletter-message" style="display: none; color: green; margin-top: 10px;" data-translate="thanks">✔️ Mulțumim pentru abonare!</div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p data-translate="copywr">&copy; 2025. Realizat în cadrul competiției „Tekwill Junior Ambassadors”.</p>
+    </div>
+  </footer>
+  
+  
+<script src="../JS/barbati.js"></script>
+<script src="../JS/colectii.js"></script>
+<script src="../JS/sertar.js"></script>
+</body>
+</html>
