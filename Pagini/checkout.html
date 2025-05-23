@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Mimilux - Coș</title>
+    <link rel="icon" href="../Imagini/Mimilux_icon-removebg-transformed_processed.png">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/checkout.css">
+    <meta name="description" content="MIMILUX">
+    <meta name="keywords" content="Bijuterii, Brățări, Coliere, Colecții, Mimilux, mimilux">
+    <script src="https://kit.fontawesome.com/db27cc50b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" alt="Logo">
+        </a>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="../Pagini/despre.html" data-translate="navAbout">Despre noi</a></li>
+            <li class="dropdown">
+                <a href="../Pagini/produse.html" data-translate="navProducts">Produse</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Pagini/barbati.html" data-translate="navMensCollection">Colecția bărbați</a></li>
+                    <li><a href="../Pagini/femei.html" data-translate="navWomensCollection">Colecția dame</a></li>
+                    <li><a href="../Pagini/sertar.html" data-translate="navLuxuryCollection">Colecția de Lux</a></li>
+                </ul>
+            </li>
+            <li><a href="../Pagini/contacte.html" data-translate="navContact">Contacte</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-icon" onclick="window.location.href='../Pagini/checkout.html'">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <div class="language-flags">
+        <a href="#" title="Română" class="active" id="flag-ro">
+            <img src="https://flagcdn.com/w40/ro.png" alt="RO">
+        </a>
+        <a href="#" title="English" id="flag-en">
+            <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+        </a>
+        <a href="#" title="Русский" id="flag-ru">
+            <img src="https://flagcdn.com/w40/ru.png" alt="RU">
+        </a>
+    </div>
+</header>
+
+
+
+
+<div class="cont">
+  <div class="cart">
+      <h2 id="titlu-cos" style="color: #ffa813;" data-translate="cart_title">Coșul dvs.</h2>
+      <div id="cos-container" class="cart-items"></div>
+      <div id="total-section" class="total-price" data-translate="total_text">Total: <span id="total-mdl">0</span> MDL
+      </div>
+      <button id="checkout-button" onclick="openCheckoutForm()" type="button" class="fnsh" data-translate="checkout_button">
+          Finalizează comanda
+      </button>
+  </div>
+</div>
+
+<div id="overlay" class="ascuns">
+<div id="checkout-form" style="display: none;">
+  <h2 data-translate="registration_title">Înregistrare</h2>
+
+  <input type="text" data-translate-placeholder="name" id="first-name" placeholder="Numele" required>
+  <input type="text" data-translate-placeholder="surname" id="last-name" placeholder="Prenumele" required>
+  <input type="tel" data-translate-placeholder="phone" id="phone" placeholder="Numărul de telefon" pattern="[0-9]{9}" title="Numărul trebuie să aibă exact 9 cifre" required>
+  <input type="email" data-translate-placeholder="email" id="email" placeholder="Email" required>
+
+  <label data-translate="deliveryMethod">Metoda de livrare:</label><br>
+  <span class="radio-group">
+    <input class="bullet" type="radio" name="delivery-method" id="delivery" value="livrare" onclick="toggleDelivery()" required>
+    <label data-translate="Courier" for="delivery">Livrare prin curier</label>
+  </span>
+  
+  <span class="radio-group">
+    <input class="bullet" type="radio" name="delivery-method" id="pickup" value="ridicare" onclick="toggleDelivery()" required>
+    <label data-translate="pickup" for="pickup">Ridicare din magazin</label>
+  </span><br><br>
+
+  <div id="livrare-fields" style="display: none;">
+    <select id="raion" required>
+      <option value="" selected="" disabled="" data-translate="raion">Selectați raion</option>
+      <option value="2">Chișinău</option>
+      <option value="3">Bălți</option>
+      <option value="4">Anenii Noi</option>
+      <option value="5">Basarabeasca</option>
+      <option value="6">Briceni</option>
+      <option value="7">Cahul</option>
+      <option value="8">Călărași</option>
+      <option value="9">Cantemir</option>
+      <option value="10">Căușeni</option>
+      <option value="11">Ciadir-Lunga</option>
+      <option value="12">Cimișlia</option>
+      <option value="13">Comrat</option>
+      <option value="14">Criuleni</option>
+      <option value="15">Dondușeni</option>
+      <option value="16">Drochia</option>
+      <option value="17">Edineț</option>
+      <option value="18">Fălești</option>
+      <option value="19">Florești</option>
+      <option value="20">Glodeni</option>
+      <option value="21">Hîncești</option>
+      <option value="22">Ialoveni</option>
+      <option value="23">Leova</option>
+      <option value="24">Nisporeni</option>
+      <option value="25">Ocnita</option>
+      <option value="26">Orhei</option>
+      <option value="27">Rezina</option>
+      <option value="28">Rîșcani</option>
+      <option value="29">Sîngerei</option>
+      <option value="30">Soroca</option>
+      <option value="31">Strășeni</option>
+      <option value="32">Șoldănești</option>
+      <option value="33">Ștefan-Vodă</option>
+      <option value="34">Taraclia</option>
+      <option value="35">Telenești</option>
+      <option value="36">Ungheni</option>
+      <option value="37">UTA Găgăuzia</option>
+    </select><br><br>
+    <input type="text" id="localitate" data-translate-placeholder="town" placeholder="Localitatea" required>
+    <input type="text" data-translate-placeholder="address" id="address" placeholder="Adresa">
+  </div>
+
+  <div id="pickup-address" style="display: none;">
+    <p data-translate="pickupAddress">Punct de ridicare: Centrul Comercial Gemenii, etaj 2</p>
+  </div><br>
+
+  <button onclick="submitOrder()" data-translate="submit_order_button">Depuneți comanda</button>
+</div>
+</div>
+
+<div style="display:none;">
+  <span data-translate="alertFillFields">Vă rugăm să completați toate câmpurile!</span>
+  <span data-translate="alertPhoneInvalid">Numărul de telefon trebuie să conțină exact 9 cifre și să nu includă litere!</span>
+  <span data-translate="alertEmailInvalid">Vă rugăm să introduceți o adresă de email validă!</span>
+  <span data-translate="alertThanks">Vă mulțumim pentru comandă, {firstName} {lastName}!\nTotal: {total} MDL.\nVă vom contacta la {phone} sau prin email la {email}.\nAdresa de livrare: {address}</span>
+  <span data-translate="alertLivrareIncompleta" style="display:none;">Vă rugăm să completați raionul, localitatea și adresa de livrare.</span>
+  <span data-translate="raion_label" style="display:none;">Raion</span>
+  <span data-translate="localitate_label" style="display:none;">Localitate</span>
+  <span data-translate="adresa_label" style="display:none;">Adresă</span>
+</div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-image" class="lightbox-image" src="" alt="Enlarged Image">
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        
+        <div class="footer-column">
+          <div class="footer-logo">
+            <a href="../index.html">
+              <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" width="90px">
+            </a>
+          </div>
+        </div>
+    
+        <div class="footer-column">
+          <h3 data-translate="pages">Pagini</h3>
+          <a href="../Pagini/despre.html" data-translate="aboutUs">Despre noi</a>
+          <a href="../Pagini/produse.html" data-translate="products">Produse</a>
+          <a href="../Pagini/contacte.html" data-translate="contacts">Contacte</a>
+          <a href="../Pagini/livrare.html" data-translate="delivery">Livrare si retur</a>
+          <a href="../Pagini/marimi.html" data-translate="sizes">Marimi Bijuterii</a>
+        </div>
+    
+    <div class="footer-column">
+    <h3 data-translate="contacts1">Contacte</h3>
+    <p><i class="fa-solid fa-phone"></i> +373 60 376 835</p>
+    <p data-translate="gemenii"><i class="fa-solid fa-location-dot"></i> Centrul Comercial Gemenii, etaj 2</p>
+    
+    <div class="footer-social" style="margin-top: 20px;">
+      <a href="https://www.facebook.com/profile.php?id=100067907257693" target="_blank">
+        <i class="fa-brands fa-facebook fa-2xl"></i>
+      </a>
+      <a href="https://www.instagram.com/mimilux.md/" target="_blank">
+        <i class="fa-brands fa-instagram fa-2xl"></i>
+      </a>
+    </div>
+    </div>
+    
+    
+    <div class="footer-column">
+      <h3 data-translate="more">Vrei mai mult?</h3>
+      <p data-translate="newsofert">Abonează-te pentru noutăți și oferte:</p>
+      <input type="email" id="newsletter-email" data-translate-placeholder="email" placeholder="Emailul tău">
+       <button id="newsletter-submit" data-translate="send">Trimite</button>
+       <div id="newsletter-error" style="display: none; color: red; margin-top: 5px;" data-translate="pleaseValid">Te rugăm să introduci un email valid.</div>
+       <div id="newsletter-message" style="display: none; color: green; margin-top: 10px;" data-translate="thanks">✔️ Mulțumim pentru abonare!</div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p data-translate="copywr">&copy; 2025. Realizat în cadrul competiției „Tekwill Junior Ambassadors”.</p>
+      </div>
+    </footer>
+
+
+<script src="../JS/cart.js"></script>
+<script src="../JS/cart1.js"></script>
+<script src="../JS/barbati.js"></script>
+</body>
+</html>
