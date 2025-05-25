@@ -185,8 +185,7 @@ button.delete {
 
   .filter-container select {
     padding: 10px 20px;
-    font-size: 2.2vh;
-    font-weight: bold;
+    font-size: 1.8vh;
     border-radius: 12px;
     border: 1px solid #555;
     background-color: #2c2c2c;
@@ -309,16 +308,18 @@ button.delete {
       position: relative;
       display: inline-block;
       margin-top: -40px;
+      z-index: 100;
     }
 
     .dropdown-toggle {
       background-color: #2c2c2c;
+      border: 1px solid #555;
       color: #fff;
-      padding: 10px 15px;
+      padding: 10px 20px;
       border: none;
-      border-radius: 5px;
+      border-radius: 12px;
       cursor: pointer;
-      font-size: 14px;
+      font-size: 1.8vh;
     }
 
     .dropdown-toggle:hover {
@@ -364,19 +365,14 @@ button.delete {
   .top-bar {
     flex-wrap: wrap;
     padding: 0px 0px;
-    align-items: center;
     justify-content: center;
     gap: 30px;
-  }
-
-  .filter-container {
-    display: flex;
-    justify-content: center;
   }
 
   .filter-container select {
     font-size: 1.8vh;
   }
+
 
   .price-filter label {
     gap: 0px;
@@ -408,8 +404,11 @@ button.delete {
     width: 18px;
   }
 
-  .filter-container,
-  .price-filter {
+  .filter-container:last-child{
     width: 90%;
+  }
+
+  .dropdown-menu{
+    margin-left: -70px;
   }
 }
