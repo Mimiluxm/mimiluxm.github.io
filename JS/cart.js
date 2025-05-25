@@ -30,7 +30,7 @@ function afiseazaCos() {
         footer.style.bottom = "0";
       }
     } else {
-      footer.style.bottom = "-24vh" ;
+      footer.style.bottom = "-28vh" ;
     }
   }
 
