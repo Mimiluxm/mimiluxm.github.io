@@ -92,7 +92,11 @@ const emailInput = document.getElementById('newsletter-email');
                   butoniereTitle: "Butoniere",
                   tagTitle: "TAG",
                   price: "Preț",
-                  sort: "SORTARE ▼"
+                  sort: "Sortare ▼",
+                  alpha: "în ordine alfabetică",
+                  exp: "mai scump",
+                  less: "mai ieftin",
+                  default: "implicit",
               },
               en: {
                 pageTitle: "Men's Collection",
@@ -154,7 +158,11 @@ const emailInput = document.getElementById('newsletter-email');
                   butoniereTitle: "Boutonniere",
                   tagTitle: "TAG",
                   price: "Price",
-                  sort: "SORT ▼"          
+                  sort: "Sort ▼",
+                  alpha: "alphabetical order",
+                  exp: "more expensive",
+                  less: "less expensive",
+                  default: "default",
                 },
               ru: {
                 pageTitle: "Мужская коллекция",
@@ -216,120 +224,118 @@ const emailInput = document.getElementById('newsletter-email');
                   butoniereTitle: "Бутоньерка",
                   tagTitle: "TAG",
                   price: "Цена",
-                  sort: "СОРТИРОВКА ▼"
+                  sort: "Сортировка ▼",
+                  alpha: "алфавитный порядок",
+                  exp: "дороже",
+                  less: "дешевле",
+                  default: "по умолчанию",
               }
           };
                 
-            
+          
           
           
           function switchLanguage(lang) {
-              document.querySelectorAll("[data-translate]").forEach(el => {
-                  const key = el.getAttribute("data-translate");
-                  if (translations[lang] && translations[lang][key]) {
-                      el.textContent = translations[lang][key];
-                  }
-              });
-          
-              document.querySelectorAll(".language-flags a").forEach(a => {
-                  a.classList.remove("active");
-              });
-              document.getElementById(`flag-${lang}`).classList.add("active");
-          
-              document.title = translations[lang].pageTitle;
-          
-              localStorage.setItem('selectedLanguage', lang);
-          }
-          
-          document.getElementById("flag-ro").addEventListener("click", function(e) {
-              e.preventDefault();
-              switchLanguage("ro");
-          });
-          document.getElementById("flag-en").addEventListener("click", function(e) {
-              e.preventDefault();
-              switchLanguage("en");
-          });
-          document.getElementById("flag-ru").addEventListener("click", function(e) {
-              e.preventDefault();
-              switchLanguage("ru");
-          });
-          
-          function setLanguage(lang) {
-              switchLanguage(lang);
-          }
-          
-          function getLanguage() {
-              const urlParams = new URLSearchParams(window.location.search);
-              const langFromUrl = urlParams.get('lang');
-              return langFromUrl || localStorage.getItem('selectedLanguage') || 'en'; 
-          }
-          
-          window.onload = function() {
-              const selectedLanguage = getLanguage(); 
-              setPageLanguage(selectedLanguage);   
-          };
-          
-          function setPageLanguage(lang) {
-              document.querySelectorAll(".language-flags a").forEach(a => {
-                  a.classList.remove("active");
-              });
-          
-              if (lang === 'ro') {
-                  document.getElementById('flag-ro').classList.add('active');
-              } else if (lang === 'en') {
-                  document.getElementById('flag-en').classList.add('active');
-              } else if (lang === 'ru') {
-                  document.getElementById('flag-ru').classList.add('active');
-              }
-          
-              document.querySelectorAll("[data-translate]").forEach(el => {
-                  const key = el.getAttribute("data-translate");
-                  if (translations[lang] && translations[lang][key]) {
-                      el.textContent = translations[lang][key];
-                  }
-              });
-
-              document.title = translations[lang].pageTitle;
-          }
-
-          function setPageLanguage(lang) {
             document.querySelectorAll("[data-translate]").forEach(el => {
-              const key = el.getAttribute("data-translate");
-              if (translations[lang][key]) {
-                el.textContent = translations[lang][key];
-              }
+                const key = el.getAttribute("data-translate");
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
             });
-          
-            document.querySelectorAll("[data-translate-placeholder]").forEach(el => {
-              const key = el.getAttribute("data-translate-placeholder");
-              if (translations[lang][key]) {
-                el.placeholder = translations[lang][key];
-              }
+        
+            document.querySelectorAll(".language-flags a").forEach(a => {
+                a.classList.remove("active");
             });
-          
-            document.title = translations[lang].pageTitle;
-          
-            document.querySelectorAll(".language-flags a").forEach(a => a.classList.remove("active"));
             document.getElementById(`flag-${lang}`).classList.add("active");
-          }
-          
-          function switchLanguage(lang) {
-            setPageLanguage(lang);
-            localStorage.setItem("selectedLanguage", lang);
-          }
-          
-          
-          ["ro", "en", "ru"].forEach(lang => {
-            document.getElementById(`flag-${lang}`).addEventListener("click", function (e) {
-              e.preventDefault();
-              switchLanguage(lang);
+        
+            document.title = translations[lang].pageTitle;
+        
+            localStorage.setItem('selectedLanguage', lang);
+        }
+        
+        document.getElementById("flag-ro").addEventListener("click", function(e) {
+            e.preventDefault();
+            switchLanguage("ro");
+        });
+        document.getElementById("flag-en").addEventListener("click", function(e) {
+            e.preventDefault();
+            switchLanguage("en");
+        });
+        document.getElementById("flag-ru").addEventListener("click", function(e) {
+            e.preventDefault();
+            switchLanguage("ru");
+        });
+        
+        function setLanguage(lang) {
+            switchLanguage(lang);
+        }
+        
+        function getLanguage() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const langFromUrl = urlParams.get('lang');
+            return langFromUrl || localStorage.getItem('selectedLanguage') || 'en'; 
+        }
+        
+     
+        
+        function setPageLanguage(lang) {
+            document.querySelectorAll(".language-flags a").forEach(a => {
+                a.classList.remove("active");
             });
+        
+            if (lang === 'ro') {
+                document.getElementById('flag-ro').classList.add('active');
+            } else if (lang === 'en') {
+                document.getElementById('flag-en').classList.add('active');
+            } else if (lang === 'ru') {
+                document.getElementById('flag-ru').classList.add('active');
+            }
+        
+            document.querySelectorAll("[data-translate]").forEach(el => {
+                const key = el.getAttribute("data-translate");
+                if (translations[lang] && translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            document.title = translations[lang].pageTitle;
+        }
+
+        function setPageLanguage(lang) {
+          document.querySelectorAll("[data-translate]").forEach(el => {
+            const key = el.getAttribute("data-translate");
+            if (translations[lang][key]) {
+              el.textContent = translations[lang][key];
+            }
           });
-          
-          window.onload = function () {
-            const savedLang = localStorage.getItem("selectedLanguage") || "ro";
-            switchLanguage(savedLang);
-          };
+        
+          document.querySelectorAll("[data-translate-placeholder]").forEach(el => {
+            const key = el.getAttribute("data-translate-placeholder");
+            if (translations[lang][key]) {
+              el.placeholder = translations[lang][key];
+            }
+          });
+        
+          document.title = translations[lang].pageTitle;
+        
+          document.querySelectorAll(".language-flags a").forEach(a => a.classList.remove("active"));
+          document.getElementById(`flag-${lang}`).classList.add("active");
+        }
+        
+        function switchLanguage(lang) {
+          setPageLanguage(lang);
+          localStorage.setItem("selectedLanguage", lang);
+        }
+        
+        
+        ["ro", "en", "ru"].forEach(lang => {
+          document.getElementById(`flag-${lang}`).addEventListener("click", function (e) {
+            e.preventDefault();
+            switchLanguage(lang);
+          });
+        });
+        
+        
 
 
 
@@ -405,10 +411,7 @@ applyFilters();
 let currentSelection = null; 
 let originalOrder = [];
 
-window.onload = function() {
-  const container = document.querySelector(".products");
-  originalOrder = Array.from(container.querySelectorAll(".product"));
-};
+
 
 function toggleDropdown() {
   const menu = document.getElementById("dropdownMenu");
@@ -416,18 +419,24 @@ function toggleDropdown() {
 }
 
 function selectOption(element, id) {
+  document.querySelectorAll('.tick').forEach(t => t.style.visibility = 'hidden');
+
   const tick = document.getElementById("tick-" + id);
   const menu = document.getElementById("dropdownMenu");
 
   if (currentSelection === id) {
-    tick.style.visibility = 'hidden';
-    currentSelection = null;
+    currentSelection = "default";
+    document.getElementById("tick-default").style.visibility = 'visible';
     resetProductsOrder();
   } else {
-    document.querySelectorAll('.tick').forEach(t => t.style.visibility = 'hidden');
-    tick.style.visibility = 'visible';
     currentSelection = id;
-    sortProducts(id);
+    tick.style.visibility = 'visible';
+
+    if (id === "default") {
+      resetProductsOrder();
+    } else {
+      sortProducts(id);
+    }
   }
 
   menu.style.display = "none";
@@ -436,21 +445,22 @@ function selectOption(element, id) {
 function sortProducts(criteria) {
   const container = document.querySelector(".products");
   const products = Array.from(container.querySelectorAll(".product"));
-  let sorted = [];
+
+  let sorted = [...products];
 
   if (criteria === "alphabetical") {
-    sorted = products.sort((a, b) => {
-      const nameA = a.querySelector("h3").textContent.trim();
-      const nameB = b.querySelector("h3").textContent.trim();
+    sorted.sort((a, b) => {
+      const nameA = a.querySelector("h3").textContent.trim().toLowerCase();
+      const nameB = b.querySelector("h3").textContent.trim().toLowerCase();
       return nameA.localeCompare(nameB);
     });
   } else if (criteria === "expensive") {
-    sorted = products.sort((a, b) =>
-      parseFloat(b.dataset.price) - parseFloat(a.dataset.price)
-    );
+    sorted.sort((a, b) => parseInt(b.dataset.price) - parseInt(a.dataset.price));
   } else if (criteria === "cheap") {
-    sorted = products.sort((a, b) =>
-      parseFloat(a.dataset.price) - parseFloat(b.dataset.price)
+    sorted.sort((a, b) => parseInt(a.dataset.price) - parseInt(b.dataset.price));
+  } else if (criteria === "default") {
+    sorted.sort((a, b) => 
+      resetProductsOrder()
     );
   }
 
@@ -470,3 +480,17 @@ window.onclick = function (e) {
     }
   }
 };
+
+window.onload = function () {
+  const selectedLanguage = getLanguage();
+  setPageLanguage(selectedLanguage);
+
+  const container = document.querySelector(".products");
+  originalOrder = Array.from(container.querySelectorAll(".product"));
+  currentSelection = "default";
+document.getElementById("tick-default").style.visibility = 'visible';
+
+  updateSliderTrack();
+  applyFilters();
+};
+
