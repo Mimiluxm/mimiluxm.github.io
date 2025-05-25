@@ -37,26 +37,16 @@ let hiddenTextVisible = false;
 function toggleReadMore() {
     const hiddenText = document.querySelector('.mai-mult .ascuns');
     const toggleButton = document.querySelector('.mai-mult .mai');
-    const lang = localStorage.getItem('lang') || 'română';
   
     const isCurrentlyHidden = hiddenText.style.display === 'none' || hiddenText.style.display === '';
     hiddenText.style.display = isCurrentlyHidden ? 'block' : 'none';
   
-    const key = isCurrentlyHidden ? 'readLess' : 'readMore';
+    const newKey = isCurrentlyHidden ? 'readLess' : 'readMore';
+    toggleButton.setAttribute('data-translate', newKey);
   
-    toggleButton.setAttribute('data-translate', key);
-    toggleButton.textContent = translations[lang][key];
+    const lang = localStorage.getItem("selectedLanguage") || "ro";
+    setPageLanguage(lang);
   }
-
-document.addEventListener("DOMContentLoaded", function () {
-    const faqTiles = document.querySelectorAll(".faq-tile");
-
-    faqTiles.forEach((tile) => {
-        tile.addEventListener("click", function () {
-            this.classList.toggle("open");
-        });
-    });
-});
 
 
 const knowledgeBase = {
