@@ -86,7 +86,11 @@ const emailInput = document.getElementById('newsletter-email');
                   diamant_inima_necklace: "Colier diamant cu inima - COL005G",
                   stea_mica_necklace: "Colier Stea mică",
                   price: "Preț",
-                  sort: "SORTARE ▼"
+                  sort: "Sortare ▼",
+                  alpha: "în ordine alfabetică",
+                  exp: "mai scump",
+                  less: "mai ieftin",
+                  default: "implicit",
               },
               en: {
                 pageTitle: "Women's Collection",
@@ -143,7 +147,11 @@ const emailInput = document.getElementById('newsletter-email');
       stea_mica_necklace: "Small Star Necklace",
       addToCart: "Add to cart",
       price: "Price",
-      sort: "SORT ▼"
+      sort: "Sort ▼",
+                  alpha: "alphabetical order",
+                  exp: "more expensive",
+                  less: "less expensive",
+                  default: "default",
               },
               ru: {
                 pageTitle: "Женская коллекция",
@@ -200,7 +208,11 @@ const emailInput = document.getElementById('newsletter-email');
                   stea_mica_necklace: "Ожерелье Маленькая Звезда",
                   addToCart: "Добавить в корзину",
                   price: "Цена",
-                  sort: "СОРТИРОВКА ▼"
+                  sort: "Сортировка ▼",
+                  alpha: "алфавитный порядок",
+                  exp: "дороже",
+                  less: "дешевле",
+                  default: "по умолчанию",
               }
           };
           
@@ -246,10 +258,7 @@ const emailInput = document.getElementById('newsletter-email');
               return langFromUrl || localStorage.getItem('selectedLanguage') || 'en'; 
           }
           
-          window.onload = function() {
-              const selectedLanguage = getLanguage(); 
-              setPageLanguage(selectedLanguage);   
-          };
+
           
           function setPageLanguage(lang) {
               document.querySelectorAll(".language-flags a").forEach(a => {
@@ -308,10 +317,6 @@ const emailInput = document.getElementById('newsletter-email');
             });
           });
           
-          window.onload = function () {
-            const savedLang = localStorage.getItem("selectedLanguage") || "ro";
-            switchLanguage(savedLang);
-          };
 
 
 
@@ -387,10 +392,7 @@ applyFilters();
 let currentSelection = null; 
 let originalOrder = [];
 
-window.onload = function() {
-  const container = document.querySelector(".products");
-  originalOrder = Array.from(container.querySelectorAll(".product"));
-};
+
 
 function toggleDropdown() {
   const menu = document.getElementById("dropdownMenu");
@@ -398,18 +400,24 @@ function toggleDropdown() {
 }
 
 function selectOption(element, id) {
+  document.querySelectorAll('.tick').forEach(t => t.style.visibility = 'hidden');
+
   const tick = document.getElementById("tick-" + id);
   const menu = document.getElementById("dropdownMenu");
 
   if (currentSelection === id) {
-    tick.style.visibility = 'hidden';
-    currentSelection = null;
+    currentSelection = "default";
+    document.getElementById("tick-default").style.visibility = 'visible';
     resetProductsOrder();
   } else {
-    document.querySelectorAll('.tick').forEach(t => t.style.visibility = 'hidden');
-    tick.style.visibility = 'visible';
     currentSelection = id;
-    sortProducts(id);
+    tick.style.visibility = 'visible';
+
+    if (id === "default") {
+      resetProductsOrder();
+    } else {
+      sortProducts(id);
+    }
   }
 
   menu.style.display = "none";
@@ -418,21 +426,22 @@ function selectOption(element, id) {
 function sortProducts(criteria) {
   const container = document.querySelector(".products");
   const products = Array.from(container.querySelectorAll(".product"));
-  let sorted = [];
+
+  let sorted = [...products];
 
   if (criteria === "alphabetical") {
-    sorted = products.sort((a, b) => {
-      const nameA = a.querySelector("h3").textContent.trim();
-      const nameB = b.querySelector("h3").textContent.trim();
+    sorted.sort((a, b) => {
+      const nameA = a.querySelector("h3").textContent.trim().toLowerCase();
+      const nameB = b.querySelector("h3").textContent.trim().toLowerCase();
       return nameA.localeCompare(nameB);
     });
   } else if (criteria === "expensive") {
-    sorted = products.sort((a, b) =>
-      parseFloat(b.dataset.price) - parseFloat(a.dataset.price)
-    );
+    sorted.sort((a, b) => parseInt(b.dataset.price) - parseInt(a.dataset.price));
   } else if (criteria === "cheap") {
-    sorted = products.sort((a, b) =>
-      parseFloat(a.dataset.price) - parseFloat(b.dataset.price)
+    sorted.sort((a, b) => parseInt(a.dataset.price) - parseInt(b.dataset.price));
+  } else if (criteria === "default") {
+    sorted.sort((a, b) => 
+      resetProductsOrder()
     );
   }
 
@@ -451,4 +460,17 @@ window.onclick = function (e) {
       menu.style.display = "none";
     }
   }
+};
+
+window.onload = function () {
+  const selectedLanguage = getLanguage();
+  setPageLanguage(selectedLanguage);
+
+  const container = document.querySelector(".products");
+  originalOrder = Array.from(container.querySelectorAll(".product"));
+  currentSelection = "default";
+document.getElementById("tick-default").style.visibility = 'visible';
+
+  updateSliderTrack();
+  applyFilters();
 };
