@@ -73,6 +73,28 @@
     </select>
   </div>
 
+  <div class="dropdown-container">
+    <button class="dropdown-toggle" onclick="toggleDropdown()" data-translate="sort">SORTARE ▼</button>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <div class="dropdown-option"  onclick="selectOption(this, 'default')">
+        <span data-translate="default">implicit</span>
+        <span class="tick" id="tick-default">✔</span>
+      </div>
+      <div class="dropdown-option"  onclick="selectOption(this, 'alphabetical')">
+        <span data-translate="alpha">în ordine alfabetică</span>
+        <span class="tick" id="tick-alphabetical">✔</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption(this, 'expensive')">
+        <span data-translate="exp">mai scump</span>
+        <span class="tick" id="tick-expensive">✔</span>
+      </div>
+      <div class="dropdown-option" onclick="selectOption(this, 'cheap')">
+        <span data-translate="less">mai ieftin</span> 
+        <span class="tick" id="tick-cheap">✔</span>
+      </div>
+    </div>
+  </div>
+
   <div class="filter-container">
     <div class="price-inputs">
       <span class="filter-label" data-translate="price">Preț:</span>
@@ -91,22 +113,6 @@
       <div class="range-track" id="rangeTrack"></div>
       <input type="range" id="rangeMin" min="0" max="1000" value="0" step="1">
       <input type="range" id="rangeMax" min="0" max="1000" value="1000" step="1">
-    </div>
-  </div>
-
-
-   <div class="dropdown-container">
-    <button class="dropdown-toggle" onclick="toggleDropdown()" data-translate="sort">SORTARE ▼</button>
-    <div class="dropdown-menu" id="dropdownMenu">
-      <div class="dropdown-option" onclick="selectOption(this, 'alphabetical')">
-        în ordine alfabetică <span class="tick" id="tick-alphabetical">✔</span>
-      </div>
-      <div class="dropdown-option" onclick="selectOption(this, 'expensive')">
-        mai scump <span class="tick" id="tick-expensive">✔</span>
-      </div>
-      <div class="dropdown-option" onclick="selectOption(this, 'cheap')">
-        mai ieftin <span class="tick" id="tick-cheap">✔</span>
-      </div>
     </div>
   </div>
 </div>
@@ -367,7 +373,6 @@
   
   
 <script src="../JS/barbati.js"></script>
-<script src="../JS/colectii.js"></script>
 <script src="../JS/sertar.js"></script>
 </body>
 </html>
