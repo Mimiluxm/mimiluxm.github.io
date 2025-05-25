@@ -29,6 +29,8 @@ function afiseazaCos() {
       } else {
         footer.style.bottom = "0";
       }
+    } else {
+      footer.style.bottom = "-24vh" ;
     }
   }
 
@@ -137,7 +139,6 @@ function openCheckoutForm() {
   checkoutForm.style.display = 'block';
 
 
-  footer.style.bottom = "0";
   footer.style.width = "100%";
 }
 
