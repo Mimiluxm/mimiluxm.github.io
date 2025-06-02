@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="pageTitle">Despre</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/despre.css">
+    <meta name="description" content="MIMILUX">
+    <meta name="keywords" content="Bijuterii, Brățări, Coliere, Colecții, Mimilux, mimilux">
+    <link rel="icon" href="../Imagini/Mimilux_icon-removebg-transformed_processed.png"> 
+    <script src="https://kit.fontawesome.com/db27cc50b0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" alt="Logo">
+            </a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="../Pagini/despre.html" data-translate="navAbout">Despre noi</a></li>
+                <li class="dropdown">
+                    <a href="../Pagini/produse.html" data-translate="navProducts">Produse</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../Pagini/barbati.html" data-translate="navMensCollection">Colecția bărbați</a></li>
+                        <li><a href="../Pagini/femei.html" data-translate="navWomensCollection">Colecția dame</a></li>
+                        <li><a href="../Pagini/sertar.html" data-translate="navLuxuryCollection">Colecția de Lux</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Pagini/contacte.html" data-translate="navContact">Contacte</a></li>
+            </ul>
+        </nav>
+    
+        <div class="cart-icon" onclick="window.location.href='../Pagini/checkout.html'">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+        </div>
+    
+        <div class="language-flags">
+            <a href="#" title="Română" class="active" id="flag-ro">
+                <img src="https://flagcdn.com/w40/ro.png" alt="RO">
+            </a>
+            <a href="#" title="English" id="flag-en">
+                <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+            </a>
+            <a href="#" title="Русский" id="flag-ru">
+                <img src="https://flagcdn.com/w40/ru.png" alt="RU">
+            </a>
+        </div>
+    </header>
+    
+    
+
+
+
+<br>
+
+
+<div class="cont">
+    <div class="content">
+        <p data-translate="intro">Magazinul Mimilux este o companie de bijuterii personalizate, cu prezență online și offline, specializată în bijuterii gravate precum inele, coliere, cercei, brățări și butoni.</p>
+        <div class="mai-mult">
+            <p class="ascuns" data-translate="details">Bijuteriile sunt realizate din oțel inoxidabil placat cu aur de 18 carate sau cu rodiu, ceea ce le face rezistente la uzură și decolorare. Mimilux oferă o garanție de un an pentru fiecare bijuterie, iar gravura este inclusă în preț. În ceea ce privește ambalajul, magazinul oferă peste 10 tipuri de ambalaje, cu și fără mesaje personalizate, însă ambalajul nu este inclus în prețul bijuteriei.</p>
+            <a class="mai" onclick="toggleReadMore()" data-translate="readMore">Citește mai mult ▼</a>
+        </div>
+    </div>
+</div>
+    
+
+        <br>
+        <br>
+        <br>
+
+        <h2 class="intr" data-translate="faqTitle">Întrebări adresate frecvent</h2>
+
+        <div class="faq-grid">
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3 data-translate="faqQ1">Ce materiale folosiți pentru bijuterii?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp" data-translate="faqA1">
+                    Bijuteriile noastre sunt realizate din oțel inoxidabil placat cu aur de 18 carate sau rodiu.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3 data-translate="faqQ2">Oferiți opțiuni de personalizare?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp" data-translate="faqA2">
+                    Da, ne specializăm în bijuterii personalizate pentru a crea ceva unic pentru dumneavoastră.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3 data-translate="faqQ3">Care este politica de returnare?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp" data-translate="faqA3">
+                    Puteți returna produsele nepersonalizate în termen de 30 de zile de la achiziție.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3 data-translate="faqQ4">Pot comanda bijuterii pentru un eveniment special?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp" data-translate="faqA4">
+                    Desigur! Acceptăm comenzi pentru evenimente speciale precum nunți, aniversări sau alte ocazii importante.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3 data-translate="faqQ5">Bijuteriile voastre sunt hipoalergenice?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp" data-translate="faqA5">
+                    Da, majoritatea bijuteriilor noastre sunt realizate din materiale hipoalergenice, ideale pentru pielea sensibilă.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3 data-translate="faqQ6">Pot să modific dimensiunea bijuteriilor?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp" data-translate="faqA6">
+                    Da, oferim servicii de ajustare a dimensiunii pentru majoritatea bijuteriilor noastre.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3 data-translate="faqQ7">Cât durează procesarea unei comenzi personalizate?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp" data-translate="faqA7">
+                    Timpul de procesare pentru o comandă personalizată este de aproximativ 7-14 zile lucrătoare.
+                </div>
+            </div>
+            <div class="faq-tile" onclick="toggleAnswer(this)">
+                <div class="question">
+                    <h3 data-translate="faqQ8">Bijuteriile sunt făcute din material propriu?</h3><i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="rasp" data-translate="faqA8">
+                    Bijuteriile noastre sunt realizate folosind materiale de înaltă calitate selectate cu atenție de la furnizori de încredere. Ne asigurăm că acestea respectă standardele noastre pentru durabilitate și estetică.
+                </div>
+            </div>
+        </div>
+
+        <div class="chatbot-icon" onclick="toggleChat()" data-translate="chatbotIcon">💬</div>
+        <div class="chat-container" id="chat-container">
+            <div class="chat-box" id="chat-box"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Scrie o întrebare..." onkeypress="handleKeyPress(event)" data-translate-placeholder="inputPlaceholder">
+                <button onclick="sendMessage()" data-translate="sendMessageButton">Trimite</button>
+            </div>
+        </div>
+
+
+      <br>
+      <br>
+
+      <footer class="footer">
+        <div class="footer-container">
+          
+          <div class="footer-column">
+            <div class="footer-logo">
+              <a href="../index.html">
+                <img src="../Imagini/Mimilux_icon-removebg-transformed_processed.png" width="90px">
+              </a>
+            </div>
+          </div>
+      
+          <div class="footer-column">
+            <h3 data-translate="pages">Pagini</h3>
+            <a href="../Pagini/despre.html" data-translate="aboutUs">Despre noi</a>
+            <a href="../Pagini/produse.html" data-translate="products">Produse</a>
+            <a href="../Pagini/contacte.html" data-translate="contacts">Contacte</a>
+            <a href="../Pagini/livrare.html" data-translate="delivery">Livrare si retur</a>
+            <a href="../Pagini/marimi.html" data-translate="sizes">Marimi Bijuterii</a>
+          </div>
+      
+      <div class="footer-column">
+      <h3 data-translate="contacts1">Contacte</h3>
+      <p><i class="fa-solid fa-phone"></i> +373 60 376 835</p>
+      <p data-translate="gemenii"><i class="fa-solid fa-location-dot"></i> Centrul Comercial Gemenii, etaj 2</p>
+      
+      <div class="footer-social" style="margin-top: 20px;">
+        <a href="https://www.facebook.com/profile.php?id=100067907257693" target="_blank">
+          <i class="fa-brands fa-facebook fa-2xl"></i>
+        </a>
+        <a href="https://www.instagram.com/mimilux.md/" target="_blank">
+          <i class="fa-brands fa-instagram fa-2xl"></i>
+        </a>
+      </div>
+      </div>
+      
+      
+      <div class="footer-column">
+        <h3 data-translate="more">Vrei mai mult?</h3>
+        <p data-translate="newsofert">Abonează-te pentru noutăți și oferte:</p>
+        <input type="email" id="newsletter-email"  data-translate-placeholder="email" placeholder="Emailul tău">
+         <button id="newsletter-submit" data-translate="send">Trimite</button>
+         <div id="newsletter-error" style="display: none; color: red; margin-top: 5px;" data-translate="pleaseValid">Te rugăm să introduci un email valid.</div>
+         <div id="newsletter-message" style="display: none; color: green; margin-top: 10px;" data-translate="thanks">✔️ Mulțumim pentru abonare!</div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p data-translate="copywr">&copy; 2025. Realizat în cadrul competiției „Tekwill Junior Ambassadors”.</p>
+        </div>
+      </footer>
+
+<script src="../JS/barbati.js"></script>
+<script src="../JS/despre.js" defer></script>
+</body>
+</html>
