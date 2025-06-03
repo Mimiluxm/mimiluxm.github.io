@@ -157,7 +157,8 @@ function cancelOrder() {
 
   afiseazaCos();
   actualizeazaNumarProduse();
-
+  const selectedLanguage = getLanguage();
+  setPageLanguage(selectedLanguage);
   closeCart();
 }
 
