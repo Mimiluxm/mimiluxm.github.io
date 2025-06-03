@@ -291,7 +291,7 @@ input[type="radio"].bullet:checked + label::before {
   #checkout-form {
     width: 85vw !important;
     position: relative;
-    top: 13%;
+    top: 10%;
     left: 47.5%;
   }
 
@@ -321,7 +321,7 @@ input[type="radio"].bullet:checked + label::before {
   }
 
   #cancel-order{
-    top: 3.5vh;
+    top: 3.6vh;
     right: -40vw;
   }
 }
