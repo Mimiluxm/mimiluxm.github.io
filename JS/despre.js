@@ -48,6 +48,15 @@ function toggleReadMore() {
     setPageLanguage(lang);
   }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const faqTiles = document.querySelectorAll(".faq-tile");
+
+    faqTiles.forEach((tile) => {
+        tile.addEventListener("click", function () {
+            this.classList.toggle("open");
+        });
+    });
+});
 
 const knowledgeBase = {
     "salut": "Bună! Cum te pot ajuta?",
